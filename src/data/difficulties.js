@@ -1,15 +1,23 @@
 const difficulties = [
   {
+    id: 'very-easy',
+    name: 'Очень лёгкий'
+  },
+  {
     id: 'easy',
-    name: 'Низкая'
+    name: 'Лёгкий'
   },
   {
     id: 'normal',
-    name: 'Средняя'
+    name: 'Средний'
   },
   {
     id: 'hard',
-    name: 'Высокая'
+    name: 'Высокий'
+  },
+  {
+    id: 'very-hard',
+    name: 'Очень высокий'
   },
 ]
 
