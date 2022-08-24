@@ -1,0 +1,9 @@
+export const block1 = document.querySelector('.block-1');
+export const ancientBtnChoose = block1.querySelector('.btn-choose');
+export const block2 = document.querySelector('.block-2');
+export const difficultyBtnChoose = block2.querySelector('.btn-choose');
+export const block3 = document.querySelector('.block-3');
+export const deck = block3.querySelector('.deck');
+export const cardBack = block3.querySelector('.cardBack');
+export const cardCurrent = block3.querySelector('.cardCurrent');
+export const cardNext = block3.querySelector('.cardNext');

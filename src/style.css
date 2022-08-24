@@ -4,3 +4,244 @@
   padding: 0;
 }
 
+body {
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-image: url(./assets/home.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-1 {
+  width: 90%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.ancients-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 20px;
+}
+
+.ancient-wrap {
+  width: 144px;
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.ancient-img {
+  cursor: pointer;
+  display: block;
+  width: 144px;
+  height: 187px;
+  box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+.ancient-img-scale-up {
+  animation: scaleUp 0.5s ease forwards;
+}
+
+@keyframes scaleUp {
+  0%{
+    position: static;
+    transform: scale(1);
+  }
+  50%{
+    position: static;
+    transform: scale(2.2);
+  }
+  100%{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    margin-left: -72px;
+    margin-top: -63px;
+    transform: scale(2.2);
+  }
+}
+
+.ancient-btn {
+  cursor: pointer;
+  width: 140px;
+  height: 44px;
+  background-color: #bcc4ca;
+  text-align: center;
+  line-height: 44px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.ancient-btn-checked {
+  border: 4px #a61949 solid;
+  line-height: 36px;
+}
+
+.btn-choose {
+  font-weight: inherit;
+  font-size: inherit;
+  border-color: #65c8a7;
+  background-color: #8db0a4;
+}
+
+.btn-choose:disabled {
+  background-color: #bcc4ca;
+  border-color: #444645;
+}
+
+.block-2 {
+  opacity: 1;
+  transition: all 0.5s;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.block2-heading {
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+}
+
+.difficulty {
+  cursor: pointer;
+  width: 240px;
+  height: 44px;
+  background-color: #bcc4ca;
+  text-align: center;
+  line-height: 44px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.difficulty-checked {
+  border: 4px #a61949 solid;
+  line-height: 36px;
+}
+
+.block-3 {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stage-text {
+  color: #FFF;
+}
+
+.current-state {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 30%;
+}
+
+.stage-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dots-container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.dot {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.green {
+  background-color: green;
+}
+
+.brown {
+  background-color: rgb(201, 113, 55);
+}
+
+.blue {
+  background-color: rgb(26, 99, 210);
+}
+
+.deck {
+  width: 238px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.cardBack {
+  width: 238px;
+  height: 350px;
+  background-image: url(./assets/mythicCardBackground.png);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 5px 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  width: 238px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+
+}
+
+.cardCurrent {
+  background-image: url(./assets/mythicCardBackground.png);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.cardNext {
+  background-image: url(./assets/MythicCards/blue/blue1.webp);
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.take-kard > .card{
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform .5s linear;
+}
+.take-kard > .cardNext{
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform .5s linear;
+}
+
+.block-hiding {
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.block-hidden {
+  display: none;
+}
