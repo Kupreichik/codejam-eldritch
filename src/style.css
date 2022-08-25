@@ -196,6 +196,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  cursor: pointer;
 }
 
 .cardBack {
@@ -224,7 +225,6 @@ body {
 }
 
 .cardNext {
-  background-image: url(./assets/MythicCards/blue/blue1.webp);
   transform: perspective(600px) rotateY(-180deg);
 }
 

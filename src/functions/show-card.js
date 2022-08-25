@@ -1,11 +1,11 @@
 import { cardCurrent, cardNext, deck } from "../dom-elements";
 
-export function showCard() {
+export function showCard(currentCard) {
+  cardNext.style.backgroundImage = `url(${currentCard})`
   deck.classList.add('take-kard');
   
   window.setTimeout(function () {
     deck.classList.remove('take-kard');
-    cardCurrent.style.backgroundImage = 'url(./assets/MythicCards/blue/blue1.webp)';
-    cardNext.style.backgroundImage = 'url(./assets/MythicCards/green/green1.webp)';
+    cardCurrent.style.backgroundImage = `url(${currentCard})`;
   }, 500);
 }
