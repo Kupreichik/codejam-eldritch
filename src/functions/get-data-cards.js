@@ -15,6 +15,12 @@ export function getDataCards() {
     originalDeck = filterDeck;
   }
 
+  if(difficulty === 'Высокий') {
+    let filterDeck = originalDeck.map(cards => 
+      cards.filter( card => card.difficulty != 'easy'))
+    originalDeck = filterDeck;
+  }
+
   const shuffledDecks = {};
   shuffledDecks.blueCards = shuffle(originalDeck[0]);
   shuffledDecks.brownCards = shuffle(originalDeck[1]);
