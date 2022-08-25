@@ -22,6 +22,6 @@ export function setStagesCards(shuffledDecks, antientRules) {
   deck.push(shuffle(thirdStageArr));
   deck.push(shuffle(secondStageArr));
   deck.push(shuffle(firstStageArr));
-console.log(deck)
+
   return deck;
 }

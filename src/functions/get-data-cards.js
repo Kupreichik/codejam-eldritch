@@ -44,5 +44,22 @@ export function getDataCards() {
       cards.filter( card => card.difficulty != 'easy'))
   }
 
+  if(difficulty === 'Очень сложный') {
+    let hardDeck = shuffledDeck.map(cards => 
+      cards.filter( card => card.difficulty == 'hard'));
+
+    let normalDeck = shuffledDeck.map(cards => 
+      cards.filter( card => card.difficulty == 'normal'));
+
+    let requiredDeck = [];
+    for(let i = 0; i < hardDeck.length; i++) {
+      let requiredСount = cardsCounts[i] - hardDeck[i].length;
+      requiredСount > 0 ?
+        requiredDeck.push([...hardDeck[i], ...normalDeck[i].splice(0, requiredСount)]) :
+        requiredDeck.push(hardDeck[i]);
+    }
+    filterDeck = requiredDeck.map(shuffle);
+  }
+
   return [filterDeck, antientRules];
 }
