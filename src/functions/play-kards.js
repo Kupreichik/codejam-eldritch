@@ -1,4 +1,4 @@
-import { cardBack, deck } from "../dom-elements";
+import { deck } from "../dom-elements";
 import { setDeck } from "./set-deck";
 import { showCard } from "./show-card";
 import { showDeckTracker } from "./show-deck-tracker";
@@ -14,7 +14,6 @@ export function playCards() {
     deck.remove();
     return;
   };
-
 
   let currentCard = currentDeck[i][currentDeck[i].length - 1];
   showCard(currentCard.cardFace);
