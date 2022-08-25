@@ -2,26 +2,26 @@ import { shuffle } from "./shuffle";
 
 export function setStagesCards(shuffledDecks, antientRules) {
   const firstStageArr = [
-    ...shuffledDecks.blueCards.splice(0, antientRules[0].firstStage.blueCards),
-    ...shuffledDecks.brownCards.splice(0, antientRules[0].firstStage.brownCards),
-    ...shuffledDecks.greenCards.splice(0, antientRules[0].firstStage.greenCards)
+    ...shuffledDecks[2].splice(0, antientRules.firstStage.blueCards),
+    ...shuffledDecks[1].splice(0, antientRules.firstStage.brownCards),
+    ...shuffledDecks[0].splice(0, antientRules.firstStage.greenCards)
   ];
   
   const secondStageArr = [
-    ...shuffledDecks.blueCards.splice(0, antientRules[0].secondStage.blueCards),
-    ...shuffledDecks.brownCards.splice(0, antientRules[0].secondStage.brownCards),
-    ...shuffledDecks.greenCards.splice(0, antientRules[0].secondStage.greenCards)
+    ...shuffledDecks[2].splice(0, antientRules.secondStage.blueCards),
+    ...shuffledDecks[1].splice(0, antientRules.secondStage.brownCards),
+    ...shuffledDecks[0].splice(0, antientRules.secondStage.greenCards)
   ];
 
   const thirdStageArr = [
-    ...shuffledDecks.blueCards.splice(0, antientRules[0].thirdStage.blueCards),
-    ...shuffledDecks.brownCards.splice(0, antientRules[0].thirdStage.brownCards),
-    ...shuffledDecks.greenCards.splice(0, antientRules[0].thirdStage.greenCards)
+    ...shuffledDecks[2].splice(0, antientRules.thirdStage.blueCards),
+    ...shuffledDecks[1].splice(0, antientRules.thirdStage.brownCards),
+    ...shuffledDecks[0].splice(0, antientRules.thirdStage.greenCards)
   ];
   const deck = [];
   deck.push(shuffle(thirdStageArr));
   deck.push(shuffle(secondStageArr));
   deck.push(shuffle(firstStageArr));
-
+console.log(deck)
   return deck;
 }
