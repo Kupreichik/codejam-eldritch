@@ -1,6 +1,8 @@
 # codejam-eldritch
 Application-helper for the board game 'Eldritch Horror'
 
+https://kupreichik.github.io/codejam-eldritch/
+
 Небольшое приложение-хелпер для настольной игры "Древний Ужас" для сборки колоды мифов.
 
 На первом этапе игроку необходимо выбрать Древнего который укажет схему колоды и сколько карт какого цвета необходимо на каждом этапе игры.
